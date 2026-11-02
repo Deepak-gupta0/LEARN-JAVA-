@@ -8,6 +8,14 @@ public class Revision {
   }
 
   public static void mapDemo(){
+    HashMap<String, Integer> hm = new HashMap<>();
+    hm.put("Raman", 98);
+    hm.put("Deepak", 100);
+    hm.put("Clowd", 94);
+
+    System.out.println("Returns old val :" + hm.put("Simon", 94));
+
+    System.out.println(hm);
 
   }
   public static void setDemo() {
@@ -35,8 +43,8 @@ public class Revision {
     //lower() return just a nearest lower neighbour Lower.
     // System.out.println(num.lower(40));
 
-    System.out.println(num.headSet(40));
-    System.out.println(num.tailSet(40));
+    // System.out.println(num.headSet(40));
+    // System.out.println(num.tailSet(40));
 
   }
 }
