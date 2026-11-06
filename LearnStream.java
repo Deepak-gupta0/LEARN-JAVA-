@@ -21,13 +21,12 @@ public class LearnStream {
     // .filter(x -> x % 2 == 0)
     // .forEach(System.out::println);
 
-    List<List<Integer>> list2 = new ArrayList<>(List.of(
-        List.of(4, 2),
-        List.of(3, 1)));
+    List<Integer> list2 = new ArrayList<>(List.of(1, 9, 5, 7, 0, 7, 9, 5));
 
     list2.stream()
-        .flatMap(x -> x.stream().map(y -> y * 2))
-        .sorted()
+        .map(x -> x * x)
+        .sorted((x, y) -> y - x)
+        .distinct()
         .forEach(System.out::println);
   }
 }
