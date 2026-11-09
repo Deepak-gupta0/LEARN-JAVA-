@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -37,9 +38,9 @@ public class LearnStream {
 
     // System.out.println(listOptional.get());
 
-    List<Integer> list = new ArrayList<>(List.of(1, 2, 8, 6, 7, 4));
+    // List<Integer> list = new ArrayList<>(List.of(1, 2, 8, 6, 7, 4));
     // Integer num = list.stream()
-    //     .reduce(1, (a, b) -> a * b);
+    // .reduce(1, (a, b) -> a * b);
 
     // System.out.println(num);
 
@@ -61,14 +62,38 @@ public class LearnStream {
 
     // System.out.println(num);
 
-    int sum = list.stream()
-    .filter(x -> x > 5)
-    .filter(x -> x % 2 == 0)
-    .mapToInt(x -> x)
-    .sum();
+    // int sum = list.stream()
+    // .filter(x -> x > 5)
+    // .filter(x -> x % 2 == 0)
+    // .mapToInt(x -> x)
+    // .sum();
 
-    System.out.println(sum);
+    // System.out.println(sum);
 
+    // List<String> list = new ArrayList<>(List.of("AA", "BBB", "CCCC", "DD", "EEE"));
+    // Map<Integer, String> mapList = list.stream()
+    //     .collect(Collectors.toMap(x -> x.length(), x -> x));
+
+    // System.out.println(mapList);
+
+    // Map<Integer,List<String>> mapList = list.stream()
+    // .collect(Collectors.groupingBy(x -> x.length()));
+
+    // System.out.println(mapList);
+
+    // List<Integer> myList = new ArrayList<>(List.of(1, 14, 11, 9));
+
+    // Map<Boolean, List<Integer>> map = myList.stream()
+    // .collect(Collectors.partitioningBy(x -> x % 2 == 0));
+
+    // System.out.println(map);
+
+    List<String> myList = new ArrayList<>(List.of("AA", "BBB", "CCCC", "DD"));
+
+    String s = myList.stream()
+    .collect(Collectors.joining("-"));
+
+    System.out.println(s);
 
   }
 }
