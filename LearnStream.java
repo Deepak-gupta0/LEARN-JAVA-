@@ -1,8 +1,4 @@
 import java.util.*;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
 public class LearnStream {
   public static void main(String[] args) {
     // List<Integer> list = new ArrayList<>(List.of(5, 12, 7, 14));
