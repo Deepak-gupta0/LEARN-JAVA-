@@ -88,12 +88,17 @@ public class LearnStream {
 
     // System.out.println(map);
 
-    List<String> myList = new ArrayList<>(List.of("AA", "BBB", "CCCC", "DD"));
+    // List<String> myList = new ArrayList<>(List.of("AA", "BBB", "CCCC", "DD"));
 
-    String s = myList.stream()
-    .collect(Collectors.joining("-"));
+    // String s = myList.stream()
+    // .collect(Collectors.joining("-"));
 
-    System.out.println(s);
+    // System.out.println(s);
+
+    List<Integer> num = new ArrayList<>(List.of(1,2,3,4,5,6,7,8,9,10,11));
+    num.parallelStream()
+    .map(x -> x * 2)
+    .forEachOrdered(System.out::println);
 
   }
 }
